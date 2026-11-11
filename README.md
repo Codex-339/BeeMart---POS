@@ -43,19 +43,17 @@ BeeMart is a full-stack Point of Sale (POS) and inventory management web applica
 ### Running the Application
 
 1. **Start Backend API & Frontend WebClient:**
-   
-   ```bash
-   
-   # Terminal 1 (Backend API)
-   cd BeeMart.API
-   dotnet build
-   dotnet run
+   ```bash
+   # Terminal 1 (Backend API)
+   cd BeeMart.API
+   dotnet build
+   dotnet run
 
-   # Terminal 2 (Frontend WebClient)
-   cd BeeMart.WebClient
-   dotnet build
-   dotnet run
-   ```
+   # Terminal 2 (Frontend WebClient)
+   cd BeeMart.WebClient
+   dotnet build
+   dotnet run
+   ```
 
 2. **Open Browser:**
    Open your browser and navigate to `http://localhost:5235`
