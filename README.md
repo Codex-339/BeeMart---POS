@@ -56,9 +56,9 @@ BeeMart is a full-stack Point of Sale (POS) and inventory management web applica
    ```
 
 2. **Open Browser:**
-   Open your browser and navigate to `http://localhost:5235`.
+   Open your browser and navigate to `http://localhost:5235`
 
-3. **Default Accounts:**
+3. **Login with Registered Accounts:**
 
 | Role | Username | Password |
 | :--- | :--- | :--- |
