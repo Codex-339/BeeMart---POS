@@ -1,0 +1,58 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - Register</title>
+    <link rel="stylesheet" href="~/css/register.css">
+</head>
+
+<body>
+    <div class="register-card">
+        <div class="card-header-line"></div>
+        <div class="card-body">
+            <h2>Register Akun</h2>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="fullName" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" />
+            </div>
+
+            <div class="form-group">
+                <label>Re-Password</label>
+                <input type="password" id="rePassword" />
+            </div>
+
+            <div class="form-group">
+                <label>Role</label>
+                <select id="role">
+                    <option value="Admin">Admin</option>
+                    <option value="Cashier">Kasir</option>
+                </select>
+            </div>
+
+            <button class="btn-submit" onclick="register()">Daftar</button>
+
+            <div class="login-link">
+                <span>Sudah punya akun?</span> 
+                <a href="/Auth/Login">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/register.js"></script>
+</body>
+</html>

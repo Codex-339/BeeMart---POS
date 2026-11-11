@@ -1,0 +1,60 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - History Transaction</title>
+    <link rel="stylesheet" href="~/css/history.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="brand">BeeMart</div>
+        <div class="user-info">
+            <span id="sessionHeaderInfo">Role: <span class="role-highlight">--</span> | Login: --</span>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="main-card">
+        <div class="tabs-container">
+            <button class="tab-btn" onclick="window.location.href='/POS/Index'">New Transaction</button>
+            <button class="tab-btn active">History Transaction</button>
+        </div>
+
+        <div class="filter-subtitle" id="kasirSubtitle">Pencarian Data Transaksi <strong>(Hanya Kasir: -)</strong></div>
+
+        <div class="search-filter-row">
+            <label for="transactionDate">Pilih Tanggal:</label>
+            <input type="date" id="transactionDate" class="date-input" />
+            <button class="btn-cari" onclick="searchHistory()">Cari Data</button>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>No. Transaksi</th>
+                    <th>Tanggal & Jam</th>
+                    <th>Kasir</th>
+                    <th>Jml Item</th>
+                    <th>Pembayaran</th>
+                    <th>Total Harga</th>
+                </tr>
+            </thead>
+            <tbody id="historyTableBody">
+                <tr>
+                    <td colspan="6" style="text-align: center; color: #888;">Silakan pilih tanggal transaksi terlebih dahulu.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination-container" id="paginationContainer"></div>
+    </div>
+
+    <script src="~/js/history.js"></script>
+</body>
+</html>

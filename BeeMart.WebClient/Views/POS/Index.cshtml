@@ -1,0 +1,104 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - New Transaction</title>
+    <link rel="stylesheet" href="~/css/pos.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="brand">BeeMart</div>
+        <div class="user-info">
+            <span id="sessionHeaderInfo">--/--/----, --.--.-- | Kasir: -</span>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="main-card">
+        <div class="tabs-container">
+            <button class="tab-btn active">New Transaction</button>
+            <button class="tab-btn" onclick="window.location.href='/History/Index'">History Transaction</button>
+        </div>
+
+        <div class="invoice-box" id="invoiceNoDisplay">Invoice No: Loading...</div>
+
+        <div class="search-box">
+            <label>Cari Barang (Ketik: Apel / Susu, lalu tekan Enter)</label>
+            <input type="text" id="searchInput" placeholder="Ketik nama barang..." autocomplete="off" onkeypress="handleSearchKeyPress(event)" />
+        </div>
+
+        <div id="searchResultSection" style="display: none;">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nama Barang</th>
+                        <th>Berat</th>
+                        <th>Stock</th>
+                        <th>Harga</th>
+                        <th>Diskon</th>
+                        <th class="column_aksi">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="searchResultsTable"></tbody>
+            </table>
+        </div>
+
+        <div class="selected-item-box" id="selectedItemBox">
+            <div class="selected-item-title" id="selectedItemTitle">Barang Terpilih: -</div>
+            
+            <div class="selected-item-row">
+                <div class="info-col">
+                    <span class="info-label">Harga Satuan:</span>
+                    <span class="info-value" id="selectedItemPrice">Rp 0</span>
+                </div>
+
+                <div class="info-col">
+                    <span class="info-label">Sisa Stock:</span>
+                    <span class="info-value" id="selectedItemStock">0</span>
+                </div>
+
+                <div class="qty-group">
+                    <label for="inputQty">Qty:</label>
+                    <input type="number" id="inputQty" class="qty-input-inline" value="1" min="1" />
+                </div>
+
+                <button class="btn-pilih" style="padding: 10px 18px;" onclick="confirmAddToCart()">Masukkan ke Keranjang</button>
+            </div>
+
+            <div id="qtyErrorMsg" class="text-error"></div>
+        </div>
+
+        <h3 class="section-title">Daftar Belanjaan</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Nama Barang</th>
+                    <th>Harga</th>
+                    <th>Diskon</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                    <th class="column_aksi">Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="cartTableBody"></tbody>
+        </table>
+
+        <div class="total-section">
+            <div class="total-text" id="grandTotalDisplay">Total: Rp 0</div>
+            <div class="payment-row">
+                <label>Metode Pembayaran:</label>
+                <select id="paymentMethodSelect"></select>
+            </div>
+            <button class="btn-submit" onclick="submitTransaction()">Submit Transaksi</button>
+        </div>
+    </div>
+    
+    <script src="~/js/pos.js"></script>
+</body>
+</html>

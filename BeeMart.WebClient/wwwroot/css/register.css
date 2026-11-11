@@ -1,0 +1,108 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background-color: #e3f2fd; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.register-card { 
+    background: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+    width: 100%; 
+    max-width: 380px; 
+    text-align: center; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.card-header-line { 
+    height: 6px; 
+    background-color: #2196f3; 
+    width: 100%; 
+}
+
+.card-body { 
+    padding: 30px; 
+}
+
+.register-card h2 { 
+    color: #1976d2; 
+    margin-bottom: 25px; 
+    font-weight: 700; 
+    font-size: 22px; 
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+    text-align: left; 
+}
+
+.form-group label { 
+    display: block; 
+    font-size: 13px; 
+    font-weight: 700; 
+    margin-bottom: 5px; 
+    color: #212121; 
+}
+
+.form-group input, .form-group select { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #bbdefb; 
+    border-radius: 6px; 
+    outline: none; 
+    font-size: 14px; 
+    background-color: #fff; 
+}
+
+.form-group input:focus, .form-group select:focus { 
+    border-color: #2196f3; 
+}
+
+.btn-submit { 
+    width: 100%; 
+    padding: 11px; 
+    background-color: #2196f3; 
+    color: white; 
+    border: none; 
+    border-radius: 6px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    font-size: 15px; 
+    margin-top: 10px; 
+    transition: background-color 0.2s; 
+}
+
+.btn-submit:hover { 
+    background-color: #1e88e5; 
+}
+
+.login-link { 
+    margin-top: 20px; 
+    font-size: 13px; 
+    color: #2196f3; 
+}
+
+.login-link span { 
+    color: #2196f3; 
+    font-weight: 700; 
+}
+
+.login-link a { 
+    color: #2196f3; 
+    text-decoration: none; 
+    font-weight: 700; 
+}
+
+.login-link a:hover { 
+    text-decoration: underline; 
+}
